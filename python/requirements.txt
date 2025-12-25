@@ -1,2 +1,0 @@
-# Same as project root; useful when working inside the python/ directory
--r ../requirements.txt
