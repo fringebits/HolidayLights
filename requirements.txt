@@ -3,7 +3,7 @@
 # - adafruit-circuitpython-neopixel + Adafruit-Blinka: CircuitPython NeoPixel support on single-board computers
 # - pytest: for running tests
 
-rpi_ws281x>=4.3.0
-adafruit-circuitpython-neopixel>=6.0.0
-Adafruit-Blinka>=10.0.0
-pytest>=7.0
+rpi_ws281x
+adafruit-circuitpython-neopixel
+Adafruit-Blinka
+pytest

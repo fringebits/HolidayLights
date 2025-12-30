@@ -5,6 +5,7 @@ Edit `PIN` and other parameters as needed for your hardware.
 import time
 from holidaylights.core import House, HOA, HouseMode
 from holidaylights.adapters import RPiWS281xAdapter
+from rpi_ws281x import Color
 
 NUM_LIGHTS = 200
 NUM_HOUSES = 27
@@ -30,6 +31,12 @@ leds = RPiWS281xAdapter(NUM_LIGHTS, pin=PIN)
 hoa.update(leds)
 all_houses[0].set_mode(HouseMode.DebugMode)
 
+def color_wipe(color, wait_ms=50):
+    for i in range(leds.strip.numPixels()):
+        leds.strip.setPixelColor(i, color)
+        leds.strip.show()
+        time.sleep(wait_ms / 1000.0)
+
 try:
     while True:
         leds.clear()
@@ -38,3 +45,5 @@ try:
         time.sleep(0.1)
 except KeyboardInterrupt:
     print("Exiting")
+    color_wipe(Color(0, 0, 0))
+

@@ -10,6 +10,9 @@ Contents
 
 Quick start (mock)
 
+0. Install required packages
+    - `sudo apt install python3-dev`
+
 1. Create and activate a virtual environment (recommended)
 
   - Windows PowerShell:
